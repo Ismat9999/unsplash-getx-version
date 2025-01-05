@@ -2,8 +2,9 @@ import 'package:http_interceptor/http/interceptor_contract.dart';
 import 'package:http_interceptor/models/retry_policy.dart';
 import 'package:http_interceptor/models/request_data.dart';
 import 'package:http_interceptor/models/response_data.dart';
-import 'log_service.dart';
-// import 'http_service.dart';
+
+import '../../../../core/services/log_service.dart';
+
 
 class HttpInterceptor implements InterceptorContract {
   static String CLIENT_ID = "o-75-lERTbDUo4a7FMsb5EcN_dMFf_1Y9daljqGEnVs";

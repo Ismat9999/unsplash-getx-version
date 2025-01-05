@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../model/photo_model.dart';
+import '../../data/model/photo_model.dart';
+
 
 class DetailsPage extends StatefulWidget {
   static const String id = "details_page";

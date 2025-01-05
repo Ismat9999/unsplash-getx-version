@@ -3,9 +3,9 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart';
 import 'package:http_interceptor/http/intercepted_client.dart';
-import '../model/collection_model.dart';
-import '../model/photo_model.dart';
-import '../model/search_model.dart';
+import '../../../model/collection_model.dart';
+import '../../../model/photo_model.dart';
+import '../../../model/search_model.dart';
 import 'http_helper.dart';
 
 class Network {

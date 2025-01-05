@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:unsplashdemo/pages/search_page.dart';
+import 'package:unsplashdemo/presantation/pages/search_page.dart';
 import 'collection_page.dart';
 
 class HomePage extends StatefulWidget {

@@ -4,8 +4,9 @@
 
 import 'dart:convert';
 
+import 'package:unsplashdemo/data/model/photo_model.dart';
 
-import 'package:unsplashdemo/model/photo_model.dart';
+
 
 SearchPhotosRes searchPhotosResFromJson(String str) => SearchPhotosRes.fromJson(json.decode(str));
 
