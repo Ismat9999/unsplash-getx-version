@@ -57,7 +57,7 @@ class _PhotosPageState extends State<PhotosPage> {
                   mainAxisSpacing: 2,
                   crossAxisSpacing: 2,
                   itemBuilder: (ctx, index) {
-                    return itemOfPhoto(controller.items[index], index);
+                    return itemOfPhoto(context,controller.items[index], index);
                   },
                 ),
 

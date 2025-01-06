@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:unsplashdemo/core/config/root_binding.dart';
-import 'package:unsplashdemo/presantation/pages/details_page.dart';
 import 'package:unsplashdemo/presantation/pages/home_page.dart';
 void main() {
   runApp(const MyApp());

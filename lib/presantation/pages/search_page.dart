@@ -80,7 +80,7 @@ class _SearchPageState extends State<SearchPage> {
                         mainAxisSpacing: 2,
                         crossAxisSpacing: 2,
                         itemBuilder: (ctx,index){
-                          return itemOfPhoto(controller.items[index],index);
+                          return itemOfPhoto(context,controller.items[index],index);
                         },
                       ),
                       controller.isLoading ? Center(child: CircularProgressIndicator(),):SizedBox.shrink(),

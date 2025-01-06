@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import '../../data/model/photo_model.dart';
 import '../pages/details_page.dart';
 
-Widget itemOfPhoto(Photo photo, int index) {
+Widget itemOfPhoto(BuildContext context,Photo photo, int index) {
   return GestureDetector(
     onTap: () {
-      _callDetailsPage(photo);
+      _callDetailsPage(context,photo);
     },
     child: Container(
       height: (index % 5 + 5) * 50.0,
@@ -16,7 +16,7 @@ Widget itemOfPhoto(Photo photo, int index) {
     ),
   );
 }
-_callDetailsPage(Photo photo) {
+_callDetailsPage(BuildContext context,Photo photo) {
   Navigator.of(context)
       .push(MaterialPageRoute(builder: (BuildContext context) {
     return DetailsPage(

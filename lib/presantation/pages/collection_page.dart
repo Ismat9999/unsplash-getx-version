@@ -24,14 +24,6 @@ class _CollectionPageState extends State<CollectionPage> {
     super.initState();
     _controller.apiCollectionList();
   }
-  callPhotosPage(Collection collection) {
-    Navigator.of(context)
-        .push(MaterialPageRoute(builder: (BuildContext context) {
-      return PhotosPage(
-        collection: collection,
-      );
-    }));
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +51,7 @@ class _CollectionPageState extends State<CollectionPage> {
                 ListView.builder(
                   itemCount: controller.items.length,
                   itemBuilder: (ctx, index) {
-                    return itemOfCollection(controller.items[index]);
+                    return itemOfCollection(context,controller.items[index]);
                   },
                 ),
 

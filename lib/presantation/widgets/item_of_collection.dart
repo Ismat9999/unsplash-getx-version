@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../../data/model/collection_model.dart';
 import '../pages/photos_page.dart';
 
-Widget itemOfCollection(Collection collection) {
+Widget itemOfCollection(BuildContext context,Collection collection) {
   return GestureDetector(
     onTap: () {
-      callPhotosPage(collection);
+      callPhotosPage(context,collection);
     },
     child: Container(
       width: double.infinity,
@@ -49,7 +49,7 @@ Widget itemOfCollection(Collection collection) {
     ),
   );
 }
-callPhotosPage(Collection collection) {
+callPhotosPage(BuildContext context, Collection collection) {
   Navigator.of(context)
       .push(MaterialPageRoute(builder: (BuildContext context) {
     return PhotosPage(
