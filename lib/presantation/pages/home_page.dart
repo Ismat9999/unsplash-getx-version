@@ -6,7 +6,6 @@ import 'package:unsplashdemo/presantation/pages/search_page.dart';
 import 'collection_page.dart';
 
 class HomePage extends StatefulWidget {
-  static const String id = "home_page";
   const HomePage({super.key});
 
   @override
@@ -14,29 +13,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-final _controller= Get.find<HomeController>();
+final controller= Get.find<HomeController>();
 
   @override
   void initState() {
     super.initState();
-    _controller.currentTap;
-    _controller.pageController;
+    controller.pageController = PageController();
   }
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder(
+    return GetBuilder<HomeController>(
       builder: (_){
         return Scaffold(
           backgroundColor: Colors.black,
           body: PageView(
-            controller: _controller.pageController,
+            controller: controller.pageController,
             children: [
               SearchPage(),
               CollectionPage(),
             ],
             onPageChanged: (int index) {
-                _controller.currentTap = index;
+                controller.currentTap = index;
             },
           ),
           bottomNavigationBar: CupertinoTabBar(
@@ -54,11 +52,11 @@ final _controller= Get.find<HomeController>();
                   )),
             ],
             onTap: (int index) {
-                _controller.currentTap = index;
-              _controller.pageController!.animateToPage(index,
+                controller.currentTap = index;
+              controller.pageController!.animateToPage(index,
                   duration: Duration(milliseconds: 200), curve: Curves.easeIn);
             },
-            currentIndex: _controller.currentTap,
+            currentIndex: controller.currentTap,
             activeColor: Colors.white,
           ),
         );
