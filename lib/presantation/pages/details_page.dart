@@ -65,7 +65,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     onPressed: () {},
                     icon: Icon(
                       Icons.arrow_downward,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                 ],

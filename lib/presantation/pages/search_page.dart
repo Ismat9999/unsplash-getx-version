@@ -55,9 +55,10 @@ class _SearchPageState extends State<SearchPage> {
                         margin: EdgeInsets.all(5),
                         child: GestureDetector(
                           onTap: (){
-                            Network.BASE;
+                            _controller.search;
                           },
                           child: TextField(
+                            style: TextStyle(color: Colors.white),
                             decoration: InputDecoration(
                               hintText: "Search photos, collections, users",
                               border: InputBorder.none,
