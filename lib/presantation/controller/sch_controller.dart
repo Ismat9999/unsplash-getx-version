@@ -11,6 +11,7 @@ class SchController extends GetxController{
   bool isLoading =true;
   List<Photo> items = [];
   String search= "office";
+  TextEditingController textEditingController=TextEditingController();
 
   ScrollController scrollController = ScrollController();
   int currentPage = 1;
@@ -36,5 +37,13 @@ class SchController extends GetxController{
     items.addAll(result);
     isLoading = false;
     update();
+  }
+
+  searchQuery()async{
+    items.clear();
+    if(textEditingController.text != ''){
+      search = textEditingController.text;
+    }
+    apiSearchPhotos();
   }
 }
