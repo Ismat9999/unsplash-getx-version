@@ -11,6 +11,7 @@ class CollectionController extends GetxController{
 
   apiCollectionList() async {
    isLoading =true;
+   update();
     var response = await Network.GET(
         Network.API_COLLECTIONS, Network.paramsCollections(1));
     var result = Network.parseCollections(response!);
@@ -18,5 +19,6 @@ class CollectionController extends GetxController{
 
       items = result;
       isLoading = false;
+      update();
   }
 }

@@ -8,17 +8,17 @@ import '../../data/model/photo_model.dart';
 class PhotosController extends GetxController{
   bool isLoading = false;
   List<Photo> items = [];
+  String id="sPgfgvR6DMo";
 
-  apiCollectionPhotos() async {
+  apiCollectionsPhotos()async{
     isLoading=true;
     update();
 
-    var response = await Network.GET(
-        Network.API_COLLECTIONS_PHOTOS, Network.paramsCollectionsPhotos(1));
+    var response =await Network.GET(Network.API_COLLECTIONS_PHOTOS.replaceFirst(":id", id), Network.paramsCollectionsPhotos(1));
     LogService.i(response!);
     var result = Network.parseCollectionsPhotos(response);
-
-      items = result;
-      isLoading = false;
+    items = result;
+    isLoading = false;
+    update();
   }
 }

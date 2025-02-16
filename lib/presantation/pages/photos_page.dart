@@ -20,7 +20,7 @@ class _PhotosPageState extends State<PhotosPage> {
   @override
   void initState() {
     super.initState();
-    _controller.apiCollectionPhotos();
+    _controller.apiCollectionsPhotos();
   }
 
 
